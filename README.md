@@ -3,6 +3,8 @@
 Yet this is another tac_plus copy/fork/clone. This one integrate some features
 from other tac_plus implementation and some specific features.
 
+See CHANGES for details.
+
 ## Build
 
 WARNING: this version only compile and runs under 32bits Linux.
@@ -16,4 +18,9 @@ I prefer manual way:
  - copy tac_plus.cfg into /etc (or create a new one)
  - start with /to/whatever/you/want/tac_plus -C /etc/tac_plus.cfg -l /var/log/tac_plus.log
 
+## Features
+
+LDAP support with TLS (althougt not fully tested)
+ACL available for login, enable auth, switchs (to create groups)
+Syslog
 

@@ -253,3 +253,66 @@ Added -DGLIBC for Linux.
 Support PAP with des encrypted passwords
 Support a return code of 3 for external authorization scripts
 
+Changes by Olivier BEDOUET
+-------------------------------------------
+config.c:
+ - added LDAP support for login directive
+ - 2009/3/12: starting ACL support for users
+ - 2009/4/12: Allow \'s within quoted words in tac_plus.conf - from Jesse Zbikowski (from F4.0.4.16 version)
+ - 2009/7/12: All func are prototyped
+ - 2010/29/1: added remoteacl support
+ - 2011/14/4: 
+   o changed struct host to support ACL def (allowing to define a group of host based on an ACL)
+   o modified parse_host() to manage the "acl =" option
+   o modified get_hvalue() to manage the "acl" option
+   o modified cfg_get_hvalue() to add the search of a host decl match through an ACL
+ - 2014/02/26: added ldap for pap option
+default_fn.c:
+ - 2009/04/12: integrated change from version F4.0.4.14 :
+"Log login failures with the username, NAS address and NAS tty -
+  requested by Andi Bauer"
+ - 2010/1/29: added remoteacl support with verify_remote_host() and
+  call from tac_login() (with some checks inside)
+ - 2011/4/12: modified login failure message to display NAC_address
+enable.c:
+ - added a function enable_user_verify() 
+ - removed compatibility support for $enable$ account
+ - added LDAP support
+ - 2010/02/22: BUG: debug report() do not work !!!
+ - 2010/02/22: Added support for "file /etc/passwd" authentication
+ - 2010/02/22: Added more debug report()
+ldap.c:
+ - 2009/11/09: does not handle DN, so a dirty patch (built-in DN) was added
+ - 2009/11/09: memory not freed
+ - 2010/01/05: DN is now read from the config like this
+ ldap://ldap-server:port/dn
+ Note: port and DN are optional.
+ - 2010/01/05: a default DN can be configured
+ - 2010/01/05: BUG: the length of the password was not correctly checked which resulted
+that every request get Successful depending of the password
+ - 2010/01/05: memory should be freed correctly (I hope :)
+ - 2010/01/07: BUG: did not check if ldapServer is NULL
+ - 2010/01/07:  Modified the check of parse results: stop if ldapServer is NULL or length
+is < 4 caracters.
+ - 2010/01/07: Added a define for the LDAP search string
+ - 2010/2/22: Removed ldap.h include
+ - 2010/2/22: Added LDAP_C #define
+ - 2015/09/17: Added TLS support
+parse.c:
+ - 2010/29/1: added remoteacl
+pwlib.c:
+ - 2010/02/22: etc_passwd_file_verify is now extern with pwlib.h
+ - 2010/02/22: BUG: with DEBUG_PASSWD_FLAG, password is loggued in clear (in func des_verify()) !
+report.c:
+ - 2009/17/12: if debug, use logfile and not syslog, if not check 
+logfile value or use syslog
+ - 2010/2/22: if can't open logfile in debug, log an error to syslog
+tac_pam.c:
+ - 2009/12/7: replaced calloc() by s_malloc
+tac_plus.c:
+ - 2009/3/12: added usage() with '-h' opt
+ - 2009/4/12:
+       o added peerid for ACL (from 4.0.4 version)
+       o added -G opt (from 4.0.4.15 version)
+       o bugs corrected (from 4.0.4.16 version)
+ - 2010/2/22: display date and time of build
