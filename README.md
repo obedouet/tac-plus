@@ -20,7 +20,7 @@ I prefer manual way:
 
 ## Features
 
-LDAP support with TLS (althougt not fully tested)
-ACL available for login, enable auth, switchs (to create groups)
-Syslog
+ - LDAP support with TLS (althougt not fully tested)
+ - ACL available for login, enable auth, switchs (to create groups)
+ - Syslog
 
