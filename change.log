@@ -1,0 +1,14 @@
+08 Thursday November 2001
+Fixed configure.in for compile FreeBSD correctly
+Changed do_acct.c for create file problem in FreeBSD(O_SYNC error)
+
+18 Thursday October 2001
+Added cleartext and des option for enable passwords 
+
+15 Monday October 2001  
+Changed mysql and pgsql configure options
+Added --enable-finger for maxsess
+
+11 Tue September 2001
+Want to do per host enable passwd..
+Ok.. By time 4:00 finished adding this feature. But required test..

@@ -1,0 +1,22 @@
+This is modified version of tacacs+ 
+The installation is very basic.
+just type :
+./configure
+(if you like to learn the configure parameters try --help option with configure )
+make tac_plus ( For make binarys ) 
+make install  ( For install tacacs+ ) 
+
+Thats all.
+
+This packet consist some helper file  to using tacacs+ easly.
+tac_plus.cfg: Example tacacs+ config file
+README.PAM: For PAM supported systems 
+README.LDAP : Information for LDAP 
+tac_plus.init: For starting and stoping tacacs+
+tac_plus.sql: table description (Mysql) 
+
+Sorry for this short description.:(
+
+Please feel free to send comments and suggestion to my mail address
+
+devrim seral <devrim@gazi.edu.tr>

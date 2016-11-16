@@ -1,0 +1,51 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:557: checking whether make sets ${MAKE}
+configure:586: checking for gcc
+configure:699: checking whether the C compiler (gcc  ) works
+configure:715: gcc -o conftest    conftest.c  1>&5
+configure:741: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:746: checking whether we are using GNU C
+configure:774: checking whether gcc accepts -g
+configure:853: checking host system type
+configure:874: checking target system type
+configure:892: checking build system type
+configure:936: checking for main in -lnsl
+configure:979: checking for main in -log
+configure:1022: checking for main in -lsocket
+configure:1065: checking for crypt in -lcrypt
+configure:1112: checking for printf in -lc
+configure:1163: checking for PAM support:
+configure:1273: checking for LDAP support
+configure:1284: checking for main in -lldap
+configure:1327: checking for main in -llber
+configure:1370: checking for ldap_simple_bind_s in -lldap
+configure:1417: checking for ldap_init in -lldap
+configure:1471: checking for DB support
+configure:1680: checking whether to enable the maxsess feature
+configure:1711: checking whether to enable the libwrap feture
+configure:1816: checking how to run the C preprocessor
+configure:1896: checking for ANSI C header files
+configure:2003: checking for fcntl.h
+configure:2003: checking for malloc.h
+configure:2003: checking for strings.h
+configure:2003: checking for sys/file.h
+configure:2003: checking for sys/ioctl.h
+configure:2003: checking for sys/time.h
+configure:2003: checking for syslog.h
+configure:2003: checking for unistd.h
+configure:2043: checking for shadow.h
+configure:2087: checking for working const
+configure:2162: checking whether time.h and sys/time.h may both be included
+configure:2199: checking whether gcc needs -traditional
+configure:2245: checking whether setpgrp takes no argument
+configure:2297: checking return type of signal handlers
+configure:2338: checking for vprintf
+configure:2443: checking for wait3 that fills in rusage
+configure:2507: checking for regcomp
+configure:2507: checking for select
+configure:2507: checking for socket
+configure:2507: checking for strcspn
+configure:2507: checking for strdup
+configure:2507: checking for strtol

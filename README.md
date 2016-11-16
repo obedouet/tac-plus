@@ -17,4 +17,3 @@ I prefer manual way:
  - start with /to/whatever/you/want/tac_plus -C /etc/tac_plus.cfg -l /var/log/tac_plus.log
 
 
-# tac-plus
